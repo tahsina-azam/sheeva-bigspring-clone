@@ -14,7 +14,7 @@ function Pricing({ data }) {
             {plans.map((plan, index) => (
               <div
                 className={`col-12 md:col-4 ${
-                  !plan.recommended ? "lg:px-0" : "col-recommended"
+                  plan.recommended ? "col-recommended" : "lg:px-0"
                 }`}
                 key={plan.title + index}
               >
@@ -55,3 +55,4 @@ function Pricing({ data }) {
 }
 
 export default Pricing;
+

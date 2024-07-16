@@ -11,14 +11,16 @@ const Posts = ({ posts }) => {
         <div className="row items-center">
           <div className="col-12 md:col-6">
             {posts[0].frontmatter.image && (
-              <Image
-                className="h-auto w-full rounded-lg"
-                src={posts[0].frontmatter.image}
-                alt={posts[0].frontmatter.title}
-                width={540}
-                height={227}
-                priority={true}
-              />
+              <div className="image-hover-effect">
+                <Image
+                  className="h-auto w-full rounded-lg"
+                  src={posts[0].frontmatter.image}
+                  alt={posts[0].frontmatter.title}
+                  width={540}
+                  height={227}
+                  priority={true}
+                />
+              </div>
             )}
           </div>
           <div className="col-12 md:col-6">
@@ -49,13 +51,15 @@ const Posts = ({ posts }) => {
       {posts.slice(1).map((post, i) => (
         <div key={`key-${i}`} className="col-12 mb-8 sm:col-6 lg:col-4">
           {post.frontmatter.image && (
-            <Image
-              className="rounded-lg"
-              src={post.frontmatter.image}
-              alt={post.frontmatter.title}
-              width={i === 0 ? "925" : "445"}
-              height={i === 0 ? "475" : "230"}
-            />
+            <div className="image-hover-effect">
+              <Image
+                className="rounded-lg"
+                src={post.frontmatter.image}
+                alt={post.frontmatter.title}
+                width={i === 0 ? "925" : "445"}
+                height={i === 0 ? "475" : "230"}
+              />
+            </div>
           )}
           <h2 className="h3 mb-2 mt-4">
             <Link
@@ -80,3 +84,4 @@ const Posts = ({ posts }) => {
 };
 
 export default Posts;
+

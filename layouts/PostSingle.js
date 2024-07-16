@@ -22,7 +22,7 @@ const PostSingle = ({ frontmatter, content, mdxContent }) => {
                   alt={title}
                   priority={true}
                   layout="responsive"
-                  className="rounded-lg"
+                  className="rounded-lg fade-in-from-below"
                 />
               )}
               {markdownify(title, "h1", "h2 mb-6 mt-6 text-left")}
